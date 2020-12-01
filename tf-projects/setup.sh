@@ -32,8 +32,8 @@ aws ec2 import-key-pair \
   --public-key-material \
         "$(grep -v PUBLIC $KEYPATH/aws.pub | 
            tr -d '\n')"
-cp $KEYPATH/aws.pem $HOME/.ssh/$KEYNAME.pem
-cp $KEYPATH/aws.pub $HOME/.ssh/$KEYNAME.pub
+mv $KEYPATH/aws.pem $HOME/.ssh/$KEYNAME.pem
+mv $KEYPATH/aws.pub $HOME/.ssh/$KEYNAME.pub
 
 #Verify
 KEYNAME="deploy-aws"
