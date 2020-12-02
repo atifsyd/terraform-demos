@@ -1,7 +1,6 @@
 provider "aws" {
   version                 = "~>2.57.0"
   profile                 = "default"
-#  shared_credentials_file = "/home/syeda/.aws/credentials"
   region                  = "us-west-1"
 }
 
